@@ -1,0 +1,36 @@
+.import{
+  padding: 2rem;
+
+}
+.import-form{
+  display: flex;
+  flex-direction: column;
+}
+.import-error{
+  color: red;
+  margin-top: 6px;
+  font-size: 14px;
+}
+.import-success{
+  color: #0ad53a;
+  margin-top: 6px;
+  font-size: 14px;
+}
+.import-form-submit{
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: .6s ease all;
+  border: 1px solid transparent;
+  background-color: #4945ff;
+  color: #fff;  
+  font-weight: 600;
+  width: max-content;
+  margin-top: 32px;
+  cursor: pointer;
+}
+.import-form-submit:hover{
+  background-color: transparent;
+  border-color: #4945ff;
+  color: #000;
+
+}
