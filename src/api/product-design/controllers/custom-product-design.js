@@ -43,15 +43,23 @@ module.exports = {
           validTags = record.tags.split(',');
         }
 
+        // Chuyển đổi Description từ chuỗi thành định dạng Slate hợp lệ
+        const descriptionSlateFormat = [
+          {
+            type: 'paragraph',
+            children: [{ text: record.description || '' }],
+          },
+        ];
+
         const design = await strapi.db.query('api::product-design.product-design').create({
           data: {
             Title: record.title,
-            Description: record.description,
+            Description: descriptionSlateFormat,  // Sử dụng format Slate
             Thumnail: record.thumnail,
             Product_categories: validCategoryIds.length > 0 ? validCategoryIds : null,
             Tags: validTags.length > 0 ? validTags : null,
-            publishedAt: new Date()
-          }
+            publishedAt: new Date(),
+          },
         });
 
         createdDesigns.push(design);
