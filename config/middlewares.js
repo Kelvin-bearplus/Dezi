@@ -6,7 +6,7 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['*'], // Bạn có thể chỉ định cụ thể tên miền của frontend React, ví dụ: ['http://localhost:3000']
+      origin: ['*'], 
     },
   },
   'strapi::poweredBy',
