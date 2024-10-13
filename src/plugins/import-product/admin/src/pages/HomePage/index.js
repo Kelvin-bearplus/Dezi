@@ -29,7 +29,7 @@ const HomePage = () => {
     try {
       const formData = new FormData();
       formData.append('files', file);
-      const token = '5bd87932f4379adc7a656ca79fdc4c3c105b34425b3fe227db87c11e41ad147e15561450110c5acffd5e1a306497dacd78d03f48ffa00604aa032fe43e9be2d4162126084c2575849b52a19cab167a87d56e38a15b8aef56be0e3642d1cdf811d2dd4a51cc1652edc1b8cca7bc202dd992a1b85a2ee452e069aa58ab81990452';
+      const token = process.env.REACT_APP_API_TOKEN;
       const response = await fetch('/api/product-designs/import', {
         method: 'POST',
         headers: {
